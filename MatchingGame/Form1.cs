@@ -53,5 +53,19 @@ namespace MatchingGame
 				}
 			}
 		}
-	}
+		/// <summary>
+		/// обработчик события нажатия на любой <see cref="Label"/> в таблице.
+		/// </summary>
+		/// <param name="sender">нажатый <see cref="Label"/></param>
+		/// <param name="e"></param>
+        private void label1_Click(object sender, EventArgs e)
+        {
+			Label кликд = sender as Label;
+			if (кликд != null)
+            {
+				if (кликд.ForeColor == Color.Black) return;
+				кликд.ForeColor = Color.Black;
+            }
+        }
+    }
 }
