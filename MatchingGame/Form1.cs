@@ -154,14 +154,14 @@ namespace MatchingGame
 		/// </remarks>
 		private void ПроверкаНаПобеду()
 		{
-            foreach (Control ячейка in tableLayoutPanel1.Controls)
-            {
+			foreach (Control ячейка in tableLayoutPanel1.Controls)
+			{
 				Label лейбл = ячейка as Label; //лейбл из ячейки в таблице
 				if (лейбл != null) //если лейбл не null
-                {
+				{
 					if (лейбл.ForeColor == лейбл.BackColor) return; //если цвет знака в лейбле равен цвету фона в лейбле - выход из метода.
-                }
-            }
+				}
+			}
 			//если цикл не прервался, то выводится сообщение о завершении игры.
 			MessageBox.Show("ты открыл все ячейки, поздравляю челик", "ну че браточек");
 			Close();
