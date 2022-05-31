@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace MatchingGame
 {
 	public partial class Form1 : Form
@@ -63,8 +57,11 @@ namespace MatchingGame
 
 		//методы
 		/// <summary>
-		/// метод для случайной расстановки каждого знака из коллекции, в каждую ячейку таблицы.
+		/// расстановка знаков в ячейки.
 		/// </summary>
+		/// <remarks>
+		/// метод для случайной расстановки каждого знака из коллекции, в каждую ячейку таблицы.
+		/// </remarks>
 		private void ЗнакиВЯчейки()
 		{
 			//цикл для расстановки знаков.
@@ -126,10 +123,11 @@ namespace MatchingGame
 		}
 
 		/// <summary>
-		/// таймер запускается, 
-		/// когда игрок нажимает на две ячейки, 
-		/// и они оказываются неверными.
+		/// обработчик завершения времени таймера.
 		/// </summary>
+		/// <remarks>
+		/// таймер запускается, когда игрок нажимает на две ячейки и они оказываются неверными.
+		/// </remarks>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
 		private void timer1_Tick(object sender, EventArgs e)
